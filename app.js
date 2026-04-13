@@ -8,9 +8,10 @@ const app = express();
 connectDB();
 
 app.use(express.json());
+app.use("/api", require("./src/routes/productRoutes"));
 
 // ROUTES
-app.use("/api", require("./routes/productroutes"));
+require('./src/routes/productRoutes');
 
 const PORT = 5000;
 
